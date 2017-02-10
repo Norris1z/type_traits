@@ -12,8 +12,16 @@ TEST(TYPE_TRAITS, test_is_string)
 	auto name_false = 99;
 	bool value_false = janor::is_string<decltype(name_false)>::value;
 	
+	const std::string const_name = "Janor";
+	bool value_const = janor::is_string<decltype(const_name)>::value;
+
+	volatile std::string volatile_name = "Github";
+	bool value_volatile = janor::is_string<decltype(volatile_name)>::value;
+	
 	EXPECT_EQ(false,value_false);
 	EXPECT_EQ(true,value_true);
+	EXPECT_EQ(true,value_const);
+	EXPECT_EQ(true,value_volatile);
 }
 
 
@@ -113,5 +121,4 @@ TEST(TYPE_TRAITS, test_is_rvalue_reference)
 	EXPECT_EQ(true,value_true_cast);
 	EXPECT_EQ(true,value_true_move);
 }
-
 

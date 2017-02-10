@@ -8,6 +8,7 @@ void funct(){
 int main()
 {
 	std::string name = "Norris";
+	const std::string const_name = "Janor";
 	std::vector<int> numbers;
 	std::size_t norris = 89;
 	auto num = 184467440737095516;
@@ -17,6 +18,7 @@ int main()
 	int&& rr_num = 999;
 	
 	std::cout<<"is_string --- "<<(janor::is_string<decltype(name)>::value ? "True":"False")<<'\n';
+	std::cout<<"is_string --- "<<(janor::is_string<decltype(const_name)>::value ? "True":"False")<<'\n';
 	std::cout<<"is_void --- "<<(janor::is_void<decltype(funct())>::value ? "True":"False")<<'\n';
 	std::cout<<"is_vector --- "<<(janor::is_vector<decltype(numbers)>::value ? "True":"False")<<'\n';
 	std::cout<<"is_int --- "<<(janor::is_int<decltype(norris)>::value ? "True":"False")<<'\n';

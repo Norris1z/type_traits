@@ -1,12 +1,11 @@
-#ifndef J_TYPES_HPP
-#define J_TYPES_HPP
+#ifndef JANOR_TYPE_TRAITS_HPP
+#define JANOR_TYPE_TRAITS_HPP
 
 namespace janor{
 
 template<typename T>
-	struct is_string{static const bool value = false;};
-	template<>
-	struct is_string<std::string>{static const bool value = true;};
+	struct is_string:
+	 std::is_same<std::string, typename std::remove_cv<T>::type>{};
 
 template <typename T>
 	struct is_int{static const bool value = false;};
@@ -53,4 +52,4 @@ template<typename T>
 
 }
 
-#endif
+#endif //JANOR_TYPE_TRAITS_HPP
