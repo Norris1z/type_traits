@@ -6,7 +6,7 @@ template <typename T, typename U>
 	struct is_same : std::false_type{};
 template <typename T>
 	struct is_same<T,T> : std::true_type{};
-	
+
 template<typename T>
 	struct is_string:
 	 is_same<std::string, typename std::remove_cv<T>::type>{};
@@ -53,6 +53,9 @@ template<typename T>
 	struct is_rvalue_reference{static const bool value = false;};
 	template<typename T>
 	struct is_rvalue_reference<T&&>{static const bool value = true;};
+
+template<typename T>
+	struct is_nullptr : is_same<T, std::nullptr_t>{};
 
 }
 

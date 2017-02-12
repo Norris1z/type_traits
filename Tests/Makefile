@@ -9,3 +9,6 @@ MAIN_FILE:= Test_type_traits.cpp
 
 install:
 	$(CXX) $(MAIN_FILE) $(INCLUDE_DIR) $(SOURCE_DIR) $(LIB_DIR) $(LIBS) 
+
+clean:
+	rm *.out

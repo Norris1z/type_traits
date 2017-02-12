@@ -136,3 +136,15 @@ TEST(TYPE_TRAITS, test_is_same)
 	EXPECT_EQ(false,false_value);
 }
 
+TEST(TYPE_TRAITS, test_is_nullptr)
+{
+	int number = 99;
+	auto pointer = nullptr;
+	auto* point = &number;
+	
+	bool true_value = janor::is_nullptr<decltype(pointer)>::value;
+	bool false_value = janor::is_nullptr<decltype(point)>::value;
+
+	EXPECT_EQ(true,true_value); 
+	EXPECT_EQ(false,false_value); 
+}
