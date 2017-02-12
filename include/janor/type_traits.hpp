@@ -2,10 +2,14 @@
 #define JANOR_TYPE_TRAITS_HPP
 
 namespace janor{
-
+template <typename T, typename U>
+	struct is_same : std::false_type{};
+template <typename T>
+	struct is_same<T,T> : std::true_type{};
+	
 template<typename T>
 	struct is_string:
-	 std::is_same<std::string, typename std::remove_cv<T>::type>{};
+	 is_same<std::string, typename std::remove_cv<T>::type>{};
 
 template <typename T>
 	struct is_int{static const bool value = false;};

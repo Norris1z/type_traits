@@ -122,3 +122,17 @@ TEST(TYPE_TRAITS, test_is_rvalue_reference)
 	EXPECT_EQ(true,value_true_move);
 }
 
+TEST(TYPE_TRAITS, test_is_same)
+{
+	int number = 44;
+	int number2 = 99;
+	bool true_value = janor::is_same<decltype(number),decltype(number2)>::value;
+	
+	auto num = nullptr;
+	auto numm = "C++ is awesome";
+	bool false_value = janor::is_same<decltype(num),decltype(numm)>::value;
+	
+	EXPECT_EQ(true,true_value);
+	EXPECT_EQ(false,false_value);
+}
+
