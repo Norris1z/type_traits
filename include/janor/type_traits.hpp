@@ -50,9 +50,9 @@ template<typename T>
 	struct is_reference<T&> : std::true_type{};
 
 template<typename T>
-	struct is_rvalue_reference{static const bool value = false;};
+	struct is_rvalue_reference :std::false_type{};
 	template<typename T>
-	struct is_rvalue_reference<T&&>{static const bool value = true;};
+	struct is_rvalue_reference<T&&>: std::true_type{};
 
 template<typename T>
 	struct is_nullptr : is_same<T, std::nullptr_t>{};
