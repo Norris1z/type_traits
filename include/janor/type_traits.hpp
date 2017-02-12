@@ -40,9 +40,9 @@ template<typename T>
 	struct is_vector<std::vector<T>>{static const bool value = true;};
 
 template<typename T>
-	struct is_pointer{ static const bool value = false;};
+	struct is_pointer :std::false_type{};
 	template<typename T>
-	struct is_pointer<T*>{static const bool value = true;};
+	struct is_pointer<T*> :std::true_type{};
 
 template<typename T>
 	struct is_reference{static const bool value = false;};
