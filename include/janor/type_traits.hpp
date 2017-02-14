@@ -50,6 +50,8 @@ template<typename T>
 	struct is_pointer :false_type{};
 	template<typename T>
 	struct is_pointer<T*> :true_type{};
+	template<>
+	struct is_pointer<std::nullptr_t>:true_type{};
 
 template<typename T>
 	struct is_reference :false_type{};

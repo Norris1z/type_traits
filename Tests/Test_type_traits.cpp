@@ -89,11 +89,16 @@ TEST(TYPE_TRAITS, test_is_pointer)
 {
 	int number = 999;
 	int* p_num = &number;
+
+	auto pointer = nullptr;
+
 	bool value_true = janor::is_pointer<decltype(p_num)>::value;
 	bool value_false = janor::is_pointer<decltype(number)>::value;
+	bool value_for_pointer = janor::is_pointer<decltype(pointer)>::value;
 	
 	EXPECT_EQ(false,value_false);
 	EXPECT_EQ(true,value_true);
+	EXPECT_EQ(true,value_for_pointer);
 }
 
 
