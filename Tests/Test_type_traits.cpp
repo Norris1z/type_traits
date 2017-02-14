@@ -148,3 +148,15 @@ TEST(TYPE_TRAITS, test_is_nullptr)
 	EXPECT_EQ(true,true_value); 
 	EXPECT_EQ(false,false_value); 
 }
+
+TEST(TYPE_TRAITS, test_true_type)
+{
+	bool value = is_true<int>::value;
+	EXPECT_EQ(true,value);
+}
+
+TEST(TYPE_TRAITS, test_false_type)
+{
+	bool value = is_false<int>::value;
+	EXPECT_EQ(false,value);	
+}

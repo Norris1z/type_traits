@@ -2,6 +2,11 @@
 #define JANOR_TYPE_TRAITS_HPP
 
 namespace janor{
+
+	struct true_type{ static constexpr bool value = true;};
+
+	struct false_type{ static constexpr bool value = false;};
+	
 template <typename T, typename U>
 	struct is_same : std::false_type{};
 template <typename T>
