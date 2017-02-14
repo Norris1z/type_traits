@@ -1,6 +1,8 @@
 #ifndef JANOR_TYPE_TRAITS_HPP
 #define JANOR_TYPE_TRAITS_HPP
 
+#include <vector>
+
 namespace janor{
 
 	struct true_type{ static constexpr bool value = true;};
