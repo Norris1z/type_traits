@@ -6,11 +6,11 @@ namespace janor{
 	struct true_type{ static constexpr bool value = true;};
 
 	struct false_type{ static constexpr bool value = false;};
-	
+
 template <typename T, typename U>
-	struct is_same : std::false_type{};
+	struct is_same : false_type{};
 template <typename T>
-	struct is_same<T,T> : std::true_type{};
+	struct is_same<T,T> : true_type{};
 
 template<typename T>
 	struct is_string:
@@ -45,19 +45,19 @@ template<typename T>
 	struct is_vector<std::vector<T>>{static const bool value = true;};
 
 template<typename T>
-	struct is_pointer :std::false_type{};
+	struct is_pointer :false_type{};
 	template<typename T>
-	struct is_pointer<T*> :std::true_type{};
+	struct is_pointer<T*> :true_type{};
 
 template<typename T>
-	struct is_reference : std::false_type{};
+	struct is_reference :false_type{};
 	template<typename T>
-	struct is_reference<T&> : std::true_type{};
+	struct is_reference<T&> :true_type{};
 
 template<typename T>
-	struct is_rvalue_reference :std::false_type{};
+	struct is_rvalue_reference :false_type{};
 	template<typename T>
-	struct is_rvalue_reference<T&&>: std::true_type{};
+	struct is_rvalue_reference<T&&>:true_type{};
 
 template<typename T>
 	struct is_nullptr : is_same<T, std::nullptr_t>{};
