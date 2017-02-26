@@ -10,7 +10,7 @@ include the header file `janor/type_traits.hpp` in your project.
 all the type check structs are under the namespace `janor`
 
 ##Example
-```
+```C++
 #include <iostream>
 #include <vector>
 #include <janor/type_traits.hpp>
