@@ -1,7 +1,7 @@
 # type_traits
 
 [![Build Status](https://travis-ci.org/Norris1z/type_traits.svg?branch=master)](https://travis-ci.org/Norris1z/type_traits)
-[![Build Status](https://ci.appveyor.com/api/projects/status/j5g0wqvliknevqcl)]( https://ci.appveyor.com/project/Norris1z/type_traits )
+[![Build Status](https://ci.appveyor.com/api/projects/status/j5g0wqvliknevqcl)]( https://ci.appveyor.com/project/Norris1z/type-traits )
 
 an implementation of C++ type_traits for  learning purposes .... Please note that it is not standard. 
 
