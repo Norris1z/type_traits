@@ -1,7 +1,6 @@
 language: cpp
 
-compiler:
--gcc
+compiler: gcc
 
 before_install:
   - if [ "$CXX" == "g++" ]; then sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test; fi
