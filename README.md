@@ -1,6 +1,7 @@
 # type_traits
 
 [![Build Status](https://travis-ci.org/Norris1z/type_traits.svg?branch=master)](https://travis-ci.org/Norris1z/type_traits)
+[![Build Status](https://ci.appveyor.com/api/projects/status/j5g0wqvliknevqcl)]( https://ci.appveyor.com/project/Norris1z/type_traits )
 
 an implementation of C++ type_traits for  learning purposes .... Please note that it is not standard. 
 
@@ -8,11 +9,13 @@ Kindly visit http://en.cppreference.com/w/cpp/header/type_traits for the standar
 
 `janor type_traits` is a header only file which helps you detect the type of objects
 
-##Usage
+## Usage
+
 include the header file `janor/type_traits.hpp` in your project. 
 all the type check structs are under the namespace `janor`
 
-##Example
+## Example
+
 ```C++
 #include <iostream>
 #include <vector>
@@ -35,7 +38,8 @@ int main()
   
 }
 ```
-##Tests 
+## Tests 
+
 All tests are found in the Tests directory. 
 Tests were written using `Gtest`.
 Note that you can change the Variables in the Tests Makefile to the path of your `Gtest` includes and `src` files
