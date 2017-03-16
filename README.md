@@ -1,6 +1,8 @@
 # type_traits
 an implementation of C++ type_traits for  learning purposes .... Please note that it is not standard. 
 
+[![Build Status](https://travis-ci.org/Norris1z/type_traits.svg?branch=master)](https://travis-ci.org/Norris1z/type_traits)
+
 Kindly visit http://en.cppreference.com/w/cpp/header/type_traits for the standardized version 
 
 `janor type_traits` is a header only file which helps you detect the type of objects
